@@ -11,6 +11,7 @@ module.exports = defineConfig({
         plugins: [createEsbuildPlugin.default(config)],
       }));
       preprocessor.addCucumberPreprocessorPlugin(on, config);
+      require('cypress-mochawesome-reporter/plugin')(on);
       return config;
     },
 	specPattern: "**/*.feature",
@@ -24,6 +25,7 @@ module.exports = defineConfig({
       inlineAssets: true,
       saveAllAttempts: false,
     },
-    projectId: "p5e6hm",
+    projectId: "3tbxdc",
+    pluginsFile: "cypress/plugins/index.js",
   },
 });

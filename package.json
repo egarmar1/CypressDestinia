@@ -9,14 +9,16 @@
     "cy:dev:firefox": "cypress run --config baseUrl=http://devtodo.monfared.io/ --browser firefox --record",
     "cy:stag:firefox": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser firefox --record",
     "cy:headed": "cypress run --config baseUrl=http://devtodo.monfared.io/ --headed",
-    "cy:test": "cypress run --config baseUrl=http://devtodo.monfared.io/"
+    "cy:test": "cypress run --config baseUrl=http://devtodo.monfared.io/",
+    "cypr": "cross-env CYPRESS_REMOTE_DEBUGGING_PORT=9222 cypress open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^17.2.0",
+    "@badeball/cypress-cucumber-preprocessor": "^17.2.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cross-env": "^7.0.3",
     "cypress": "^12.13.0",
     "cypress-mochawesome-reporter": "^3.5.0"
   },

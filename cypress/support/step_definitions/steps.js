@@ -1,15 +1,14 @@
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
 
-import TodoPage from '../../e2e/pages/todoPage/todoPage'
+import TodoPage from '../../e2e/pages/homePage/homePage'
 
 const todoPage = new TodoPage()
 
 Given('I open the Todo page app', () => {
-    cy.visit('/')
-    //cy.visit('http://stagtodo.monfared.io/')
+    //cy.visit('/')
+    cy.visit('https://destinia.com/')
     cy.contains('Environment Todo')
   })
-
 When(
     'I add a todo with text {string}',
     (query) => {
@@ -17,7 +16,6 @@ When(
       todoPage.clickAddButton(query)
     }
   )
-
 When(
     'I check the todo checkbox with index {int}',
     (index) => {
