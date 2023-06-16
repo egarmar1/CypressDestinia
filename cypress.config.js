@@ -5,6 +5,8 @@ const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
 const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild");
 const allureWriter = require ("@shelex/cypress-allure-plugin/writer");
 
+const customEsbuildPreprocessor = createCustomEsbuildPreprocessor('./custom-esbuild-preprocessor.js', esbuildOptions);
+
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {

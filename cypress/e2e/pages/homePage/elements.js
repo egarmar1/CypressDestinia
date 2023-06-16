@@ -1,8 +1,10 @@
+require('cypress-xpath');
 module.exports = {
     HOMEPAGE:{
         DESTINO_INPUT: "#hotelsearchwidget0-location",
         DESTINO_FIRST_OPTION: "li#result0_0 span",
-        COOKIES_ACCEPT_BUTTON: "button[data-qa='oil-YesButton']",
+        //COOKIES_ACCEPT_BUTTON: "button[data-qa='oil-YesButton']",
+        COOKIES_ACCEPT_BUTTON: "//button[@data-qa='oil-YesButton']",
         OCUPACION_BUTTON: "button[id='hotelsearchwidget0-occupancy-customelement-menubt']",
         ADULTOS_ADD_BUTTON: "#hotelsearchwidget0-occupancy-customelement > .searchDropdown > .searchGroups > .searchGroup > :nth-child(2) > .searchCounter > .searchCounter__btn--plus",
         NINYOS_ADD_BUTTON: "((//div[@class='searchGroups']//div[contains(@class, 'searchGroup')])[1]//div[@class='searchOption'])[2]//child::button[@class='searchCounter__btn searchCounter__btn--plus']",

@@ -47,7 +47,7 @@ class HomePage {
   }
 
   acceptCookies() {
-    cy.get(elements.HOMEPAGE.COOKIES_ACCEPT_BUTTON).click()
+    cy.xpath(elements.HOMEPAGE.COOKIES_ACCEPT_BUTTON).click()
   }
 
 }
