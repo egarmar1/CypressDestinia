@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jun 16 11:48:57 CEST 2023","Fri Jun 16 11:49:07 CEST 2023","10371","","test suite home","","","","Validar que no se puede realizar una búsqueda sin escoger destino",""
+"passed","Fri Jun 16 11:48:28 CEST 2023","Fri Jun 16 11:48:44 CEST 2023","15480","","test suite home","","","","Validar que no se puede seleccionar mas de 9 adultos",""
+"passed","Fri Jun 16 11:48:44 CEST 2023","Fri Jun 16 11:48:57 CEST 2023","12546","","test suite home","","","","Validar que no se pueden seleccionar más de 9 personas",""
+"passed","Fri Jun 16 11:49:07 CEST 2023","Fri Jun 16 11:49:39 CEST 2023","32122","","test suite home","","","","Validar que se muestra la ubicación adecuada al buscar por una ubicación concreta (example #1)",""
+"passed","Fri Jun 16 11:55:50 CEST 2023","Fri Jun 16 11:56:34 CEST 2023","44155","","test suite hoteles","","","","Validar ordenamiento por Valoración en hoteles",""

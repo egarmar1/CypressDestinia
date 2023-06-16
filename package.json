@@ -19,6 +19,7 @@
     "@badeball/cypress-cucumber-preprocessor": "^17.2.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "@shelex/cypress-allure-plugin": "^2.40.0",
+    "allure-commandline": "^2.22.4",
     "cross-env": "^7.0.3",
     "cypress": "^12.14.0",
     "cypress-mochawesome-reporter": "^3.5.0",
