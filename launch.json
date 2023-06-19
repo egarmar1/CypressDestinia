@@ -1,5 +1,5 @@
 {
-    "type": "chrome",
+    "type": "firefox",
     "request": "attach",
     "name": "Attach to Cypress Chrome",
     "port": 9222,

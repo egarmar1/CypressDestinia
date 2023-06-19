@@ -1,6 +1,7 @@
 var elements = require('./elements')
+import BasePage from '../basePage';
 
-class HotelesPage {
+class HotelesPage extends BasePage{
   
   checkDestino(destino){
     let isCorrect = true;

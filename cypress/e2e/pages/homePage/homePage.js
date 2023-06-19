@@ -1,6 +1,8 @@
 var elements = require('./elements')
 
-class HomePage {
+import BasePage  from '../basePage'
+
+class HomePage extends BasePage{
 
   clickAdultosAddButton() {
     return cy.get(elements.HOMEPAGE.ADULTOS_ADD_BUTTON).click()

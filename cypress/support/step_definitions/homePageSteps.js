@@ -11,6 +11,7 @@ Given('el usuario se encuentra in the home page', () => {
 
   cy.visit('https://destinia.com/')
   homePage.acceptCookies()
+  
   cy.wait(1000)
 })
 
