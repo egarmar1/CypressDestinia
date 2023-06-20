@@ -70,6 +70,8 @@ When('el usuario selecciona como destino {string}', (destination) => {
 });
 
 Then('se muestran los hoteles con ubicacion {string}', (destination) => {
+  debugger;
   const isCorrect = hotelesPage.checkDestino(destination);
-  expect(isCorrect).to.be.true;
+  
+  expect(isCorrect).to  .be.true;
 })

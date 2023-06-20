@@ -1,5 +1,7 @@
 module.exports = {
     HOTELESPAGE:{
+
+        FILTRAR_BUTTON: ".cont_btn_mix > .pull-left",
         CIUDAD_HOTELES:"div.detail_information_hotel > span.city",
         VALORACION_HOTELES:"span.generic-rating__score",
         PRECIOS_HOTELES: "span.price_definitive > span.price.eur",

@@ -6,6 +6,9 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 module.exports = defineConfig({
   e2e: {
+    env: {
+      commandDelay: false,
+    },
     setupNodeEvents(on, config) {
       if (config && config.env) {
         on("file:preprocessor", createBundler({
