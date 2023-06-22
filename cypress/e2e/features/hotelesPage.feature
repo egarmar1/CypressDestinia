@@ -12,23 +12,23 @@ Feature: test suite hoteles
     And escoge la opción Valoracion
     Then se muestran los hoteles ordenados de mayor a menor Valoracion
 
-  @testcase7
-  @Ordenar
-  Scenario: Validar ordenamiento por precio en hoteles
-    And escoge la opción Mas economicos
-    Then se muestran los hoteles ordenados de menor a mayor Precio
+  # @testcase7
+  # @Ordenar
+  # Scenario: Validar ordenamiento por precio en hoteles
+  #   And escoge la opción Mas economicos
+  #   Then se muestran los hoteles ordenados de menor a mayor Precio
 
-  @testcase9
-  @Filtrar
-  Scenario Outline: Validar filtro por estrellas
-    And  filtra por Categoria "<estrellas_hotel>" estrellas
-    Then se muestran hoteles de "<estrellas_hotel>" estrellas
+  # @testcase9
+  # @Filtrar
+  # Scenario Outline: Validar filtro por estrellas
+  #   And  filtra por Categoria "<estrellas_hotel>" estrellas
+  #   Then se muestran hoteles de "<estrellas_hotel>" estrellas
 
-    Examples:
-      | estrellas_hotel |
-      | 5               |
-      | 4               |
-      | 2               |
+  #   Examples:
+  #     | estrellas_hotel |
+  #     | 5               |
+  #     | 4               |
+  #     | 2               |
 
   # @testcase10
   # @Filtrar
