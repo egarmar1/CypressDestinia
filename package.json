@@ -10,7 +10,8 @@
     "cy:stag:firefox": "cypress run --config baseUrl=http://stagtodo.monfared.io/ --browser firefox --record",
     "cy:headed": "cypress run --config baseUrl=http://devtodo.monfared.io/ --headed",
     "cy:test": "cypress run --config baseUrl=http://devtodo.monfared.io/",
-    "cypr": "cross-env CYPRESS_REMOTE_DEBUGGING_PORT=9222 cypress open"
+    "cypr": "cross-env CYPRESS_REMOTE_DEBUGGING_PORT=9222 cypress open",
+    "test:smoke": "cypress run --env TAGS=\"@smoke\" --select-tests \"cypress/integration/**/*\""
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "cross-env": "^7.0.3",
     "cypress": "^12.14.0",
     "cypress-mochawesome-reporter": "^3.5.0",
+    "cypress-select-tests": "^1.7.1",
     "cypress-xpath": "^2.0.1"
   },
   "cypress-cucumber-preprocessor": {

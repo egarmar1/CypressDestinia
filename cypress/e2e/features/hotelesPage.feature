@@ -18,8 +18,8 @@ Feature: test suite hoteles
     And escoge la opción Mas economicos
     Then se muestran los hoteles ordenados de menor a mayor Precio
 
-@testcase9
-    @Filtrar
+  @testcase9
+  @Filtrar
   Scenario Outline: Validar filtro por estrellas
     And  filtra por Categoria "<estrellas_hotel>" estrellas
     Then se muestran hoteles de "<estrellas_hotel>" estrellas
@@ -29,3 +29,13 @@ Feature: test suite hoteles
       | 5               |
       | 4               |
       | 2               |
+
+  # @testcase10
+  # @Filtrar
+  # Scenario Outline: Validar filtro por precio
+  #   And filtra por el rango de precio <X> - <Y>
+  #   Then se muestran hoteles del rango <X> - <Y>
+
+  #   Examples:
+  #     | X  | Y   |
+  #     | 50 | 900 |

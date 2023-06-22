@@ -40,3 +40,11 @@ Then('se muestran los hoteles ordenados de mayor a menor Valoracion', () => {
     const isFiltered = hotelesPage.checkHotelesEstrella(estrellas);
     expect(isFiltered).to.be.true;
   })
+  When('filtra por el rango de precio {int} - {int}', (X,Y) => {
+    hotelesPage.deslizarHandles(X,Y);
+  })
+  Then('se muestran hoteles del rango {int} - {int}', (X,Y) => {
+    const isFiltered = hotelesPage.checkPriceFilter(X,Y);
+    expect(isFiltered).to.be.true;
+  })
+  

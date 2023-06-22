@@ -21,6 +21,20 @@ class BasePage {
                     });
                 }
             );
+            // cy.intercept(
+            //     'https://consent.destinia.com/**',
+            //     { middleware: true },
+            //     (req) => {
+            //         req.on('before:response', (res) => {
+            //             // force all API responses to not be cached
+            //             res.headers['cache-control'] = 'no-store';
+            //         });
+            //         req.reply({
+            //             statusCode: 200,
+            //             body: 'Request stubbed',
+            //         });
+            //     }
+            // );
 
             // Other intercepts...
             cy.intercept('GET', 'https://securepubads.g.doubleclick.net/pagead/ppub_config?ippd=destinia.com', (req) => {

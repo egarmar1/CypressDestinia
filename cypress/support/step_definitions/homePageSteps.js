@@ -8,8 +8,9 @@ const hotelesPage = new HotelesPage()
 
 Given('el usuario se encuentra in the home page', () => {
   //cy.visit('/')
-
+  
   cy.visit('https://destinia.com/')
+  cy.wait(2000)
   homePage.acceptCookies()
   
   cy.wait(1000)

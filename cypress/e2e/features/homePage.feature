@@ -5,12 +5,14 @@ Feature: test suite home
     Given el usuario se encuentra in the home page
 
   @testcase01
+  @smoke
   @maxPersonasPorHabitacion
   Scenario: Validar que no se puede seleccionar mas de 9 adultos
     When selecciona 9 adultos en el apartado ocupación
     Then no permite seleccionar más personas
 
   @testcase02
+  @smoke
   @maxBebesPorHabitacion
   Scenario: Validar que no se pueden seleccionar más de 9 personas
     When selecciona 9 personas aleatorias en el apartado ocupación

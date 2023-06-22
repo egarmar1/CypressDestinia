@@ -4,7 +4,7 @@ import BasePage from '../basePage';
 class HotelesPage extends BasePage {
 
   checkDestino(destino) {
-    debugger;
+
     let isCorrect = true;
 
     cy.get(elements.HOTELESPAGE.CIUDAD_HOTELES).each(($ciudadHotel) => {
@@ -51,7 +51,6 @@ class HotelesPage extends BasePage {
 
           let precioHotelText = $precioHotel.text();
           cy.wrap($precioHotel).then(($el) => {
-            debugger;
             precioHotelInt = parseInt(precioHotelText.substring(0, precioHotelText.length - 2), 10)
           });
 
@@ -111,6 +110,74 @@ class HotelesPage extends BasePage {
     })
     return filtered
   }
+
+  deslizarHandles(X, Y) {
+    cy.wait(20000)
+    let isCorrect = false;
+    let leftXOffset = 0;
+    let rightXOffset = 0;
+    let myElement
+
+
+    cy.xpath(elements.HOTELESPAGE.HANDLES_PRECIO).eq(0).scrollIntoView();
+
+    cy.xpath(elements.HOTELESPAGE.HANDLES_PRECIO).eq(0).then(($firstHandle) => {
+
+      cy.xpath(elements.HOTELESPAGE.PRECIOS_HANDLES).eq(0).then(($priceLeft) => {
+        
+        leftXOffset = parseInt($priceLeft.text().substring(0, $priceLeft.text().length - 2), 10);
+        debugger;
+        while (isCorrect === false) {
+          if (X <= leftXOffset) {
+            isCorrect = true;
+
+          } else {
+              $firstHandle
+              .trigger('mousedown', { which: 1 })
+              .trigger('mousemove', { pageX: 4, pageY: 0 }) // Use pageX and pageY instead of clientX and clientY
+              .trigger('mouseup', { force: true });
+          }
+        }
+
+      })
+
+
+    })
+
+
+
+    cy.xpath(elements.HOTELESPAGE.PRECIOS_HANDLES).eq(1).then(($element2) => {
+      rightXOffset = parseInt($element2.text().replace(".", "").substring(0, $element2.text().replace(".", "").length() - 2))
+      while (isCorrect === false) {
+        if (Y >= rightXOffset) {
+          isCorrect = true;
+
+        } else {
+          cy.xpath(elements.HOTELESPAGE.HANDLES_PRECIO)
+            .eq(0)
+            .trigger('mousedown')
+            .trigger('mousemove', { clientX: -4, clientY: 0 })
+            .trigger('mouseup');
+        }
+      }
+    })
+
+  }
+  checkPriceFilter(X, Y) {
+    let isCorrect = true;
+    cy.xpath(elements.HOTELESPAGE.PRECIOS_HOTELES).each(($precioHotel) => {
+      if ($precioHotel.text !== "") {
+        let precio = parseInt($precioHotel.text().replace(".", "").substring(0, $precioHotel.text().replace(".", "").length - 2));
+
+        if (precio < X || precio > Y) {
+          isCorrect = false;
+        }
+      }
+    })
+    return isCorrect
+  }
+
+
 }
 
 export default HotelesPage
